@@ -97,25 +97,18 @@ class Television(QMainWindow, Ui_MainWindow):
         if self.power_status:
             if self.channel_status == 0:
                 self.channel_image.setPixmap(QtGui.QPixmap("images/gray.png"))
-                print(f'{self.channel_status}')
             elif self.channel_status == 1:
                 self.channel_image.setPixmap(QtGui.QPixmap("images/abc.png"))
-                print(f'{self.channel_status}')
             elif self.channel_status == 2:
                 self.channel_image.setPixmap(QtGui.QPixmap("images/cnn.png"))
-                print(f'{self.channel_status}')
             elif self.channel_status == 3:
                 self.channel_image.setPixmap(QtGui.QPixmap("images/nbc.png"))
-                print(f'{self.channel_status}')
             elif self.channel_status == 4:
                 self.channel_image.setPixmap(QtGui.QPixmap("images/weather.png"))
-                print(f'{self.channel_status}')
             elif self.channel_status == 5:
                 self.channel_image.setPixmap(QtGui.QPixmap("images/cbs.png"))
-                print(f'{self.channel_status}')
             elif self.channel_status == 6:
                 self.channel_image.setPixmap(QtGui.QPixmap("images/espn.png"))
-                print(f'{self.channel_status}')
         else:
             self.channel_image.setPixmap(QtGui.QPixmap("images/black.png"))
 
