@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         MainWindow.setTabShape(QtWidgets.QTabWidget.TabShape.Rounded)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setStyleSheet("QWidget {\n"
-"    background-color: rgb(153, 153, 153);\n"
+"    background-color: rgb(51, 51, 51)\n"
 "}")
         self.centralwidget.setObjectName("centralwidget")
         self.power_button = QtWidgets.QPushButton(parent=self.centralwidget)
@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
 "QPushButton:pressed {\n"
 "    border-style: solid;\n"
 "    border-width: 4px;\n"
-"    border-color: rgb(144, 144, 144);\n"
+"    border-color: black;\n"
 "}")
         self.power_button.setText("")
         icon = QtGui.QIcon()
@@ -84,13 +84,13 @@ class Ui_MainWindow(object):
         self.volume_up_button.setFont(font)
         self.volume_up_button.setStyleSheet("QPushButton {\n"
 "    border-radius: 35px; \n"
-"    background-color: rgb(204, 204, 204);\n"
+"    background-color: rgb(124, 165, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    border-style: solid;\n"
 "    border-width: 4px;\n"
-"    border-color: rgb(144, 144, 144);\n"
+"    border-color: black;\n"
 "}")
         self.volume_up_button.setText("")
         icon1 = QtGui.QIcon()
@@ -109,13 +109,13 @@ class Ui_MainWindow(object):
         self.volume_down_button.setFont(font)
         self.volume_down_button.setStyleSheet("QPushButton {\n"
 "    border-radius: 35px; \n"
-"    background-color: rgb(204, 204, 204);\n"
+"    background-color: rgb(124, 165, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    border-style: solid;\n"
 "    border-width: 4px;\n"
-"    border-color: rgb(144, 144, 144);\n"
+"    border-color: black;\n"
 "}")
         self.volume_down_button.setText("")
         icon2 = QtGui.QIcon()
@@ -133,13 +133,13 @@ class Ui_MainWindow(object):
         self.channel_up_button.setAutoFillBackground(False)
         self.channel_up_button.setStyleSheet("QPushButton {\n"
 "    border-radius: 35px; \n"
-"    background-color: rgb(204, 204, 204);\n"
+"    background-color: rgb(124, 165, 255)\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    border-style: solid;\n"
 "    border-width: 4px;\n"
-"    border-color: rgb(144, 144, 144);\n"
+"    border-color: black;\n"
 "}")
         self.channel_up_button.setText("")
         self.channel_up_button.setIcon(icon1)
@@ -158,13 +158,13 @@ class Ui_MainWindow(object):
         self.channel_down_button.setFont(font)
         self.channel_down_button.setStyleSheet("QPushButton {\n"
 "    border-radius: 35px; \n"
-"    background-color: rgb(204, 204, 204);\n"
+"    background-color: rgb(124, 165, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    border-style: solid;\n"
 "    border-width: 4px;\n"
-"    border-color: rgb(144, 144, 144);\n"
+"    border-color: black;\n"
 "}")
         self.channel_down_button.setText("")
         self.channel_down_button.setIcon(icon2)
@@ -181,13 +181,13 @@ class Ui_MainWindow(object):
         self.mute_button.setFont(font)
         self.mute_button.setStyleSheet("QPushButton {\n"
 "    border-radius: 32px; \n"
-"    background-color: rgba(111, 233, 255, 217);\n"
+"    background-color: rgb(230, 230, 230)\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
 "    border-style: solid;\n"
 "    border-width: 4px;\n"
-"    border-color: rgb(144, 144, 144);\n"
+"    border-color: black;\n"
 "}")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("images/mute.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -200,7 +200,10 @@ class Ui_MainWindow(object):
         font.setFamily("Helvetica")
         font.setPointSize(15)
         self.volume_label.setFont(font)
-        self.volume_label.setStyleSheet("")
+        self.volume_label.setStyleSheet("QLabel {\n"
+"    color: rgb(230, 230, 230);\n"
+"    background-color: rgb(51, 51, 51);\n"
+"}")
         self.volume_label.setFrameShape(QtWidgets.QFrame.Shape.Box)
         self.volume_label.setLineWidth(2)
         self.volume_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
@@ -211,9 +214,13 @@ class Ui_MainWindow(object):
         font.setFamily("Helvetica")
         font.setPointSize(15)
         self.channel_label.setFont(font)
-        self.channel_label.setStyleSheet("")
+        self.channel_label.setStyleSheet("QLabel {\n"
+"    color: rgb(230, 230, 230);\n"
+"    background-color: rgb(51, 51, 51);\n"
+"}")
         self.channel_label.setFrameShape(QtWidgets.QFrame.Shape.Box)
         self.channel_label.setLineWidth(2)
+        self.channel_label.setScaledContents(False)
         self.channel_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.channel_label.setWordWrap(False)
         self.channel_label.setObjectName("channel_label")
